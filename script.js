@@ -71,7 +71,7 @@ async function startMic() {
     function checkBlow() {
       analyser.getByteFrequencyData(data);
       let volume = data.reduce((a, b) => a + b) / data.length;
-      if (volume > 12) {
+      if (volume > 10) {
         candles.forEach(c => (c.lit = false));
         render();
         updateCandleCount();
