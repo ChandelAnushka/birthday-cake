@@ -1,0 +1,81 @@
+body {
+  text-align: center;
+  background: linear-gradient(180deg, #ffdde1, #ee9ca7);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+#candleCount {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.cake-container {
+  position: relative;
+  display: inline-block;
+}
+
+#cakeCanvas {
+  border: 3px solid #555;
+  border-radius: 15px;
+  background: #fffbe7;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+#confettiCanvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  background: #ff6699;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff3366;
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff3366;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+#message.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hidden {
+  display: none;
+}
